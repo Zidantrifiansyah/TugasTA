@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(images/Cupang_20juta.png) center/cover no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+.dashboard-card {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.btn-login-nav {
+    background: transparent;
+    border: 1px solid rgba(0,201,177,0.4);
+    color: #00c9b1;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-login-nav:hover {
+    background: rgba(0,201,177,0.12);
+    border-color: #00c9b1;
+    color: #00c9b1;
+}
