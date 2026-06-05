@@ -6,7 +6,13 @@
 <section class="container mt-4">
     <div class="hero-bg p-5 text-center rounded-4 shadow-sm border border-info border-opacity-25">
         <i class="bi bi-flower1 display-1 text-info mb-3 d-block"></i>
-        <h1 class="text-body-emphasis fw-bold mb-3">🐠 Selamat Datang di Dan's Cupang</h1>
+        <h1 class="text-body-emphasis fw-bold mb-3">
+        @if(session()->has('login'))
+    <p class="text-success fw-bold">
+        Login sebagai : {{ session('username') }}
+    </p>
+@endif    
+        🐠 Selamat Datang di Dan's Cupang</h1>
         <p class="col-lg-8 mx-auto fs-5 text-muted mb-4">
             Penjualan ikan cupang berkualitas tinggi dengan berbagai varian warna dan jenis yang menakjubkan. 
             Kami menjamin kesehatan dan kualitas setiap ikan cupang yang kami jual.
@@ -15,11 +21,15 @@
             <a href="{{ url('/order') }}" class="btn btn-info btn-lg px-4 rounded-pill">
                 <i class="bi bi-cart-plus me-2"></i>Pesan Sekarang
             </a>
-            @if(session()->has('login'))
-                <a href="{{ url('/products') }}" class="btn btn-outline-info btn-lg px-4 rounded-pill">
-                    <i class="bi bi-box me-2"></i>Kelola Produk
-                </a>
-            @endif
+           @if(session()->has('login'))
+    <a href="{{ url('/products') }}" class="btn btn-outline-info btn-lg px-4 rounded-pill">
+        <i class="bi bi-box me-2"></i>Kelola Produk
+    </a>
+
+    <a href="{{ url('/logout') }}" class="btn btn-danger btn-lg px-4 rounded-pill">
+        Logout
+    </a>
+@endif
         </div>
     </div>
 </section>
